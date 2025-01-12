@@ -4,15 +4,15 @@ def main(page: ft.Page):
     page.title = "Lista de Tarefas"
     page.vertical_alignment = ft.MainAxisAlignment.START
 
-    # Lista que armazenará as tarefas
+    # Lista(vazia) que armazenará as tarefas
     tarefas = []
 
     # Função para adicionar tarefa
     def adicionar_tarefa(e):
-        if campo_tarefa.value.strip() != "":  # Verifica se o campo não está vazio
+        if campo_tarefa.value.strip() != "":  
             tarefas.append(campo_tarefa.value.strip())
             lista_tarefas.controls.append(ft.Text(campo_tarefa.value.strip()))
-            campo_tarefa.value = ""  # Limpa o campo de entrada
+            campo_tarefa.value = ""  
             lista_tarefas.update()
             campo_tarefa.update()
 
